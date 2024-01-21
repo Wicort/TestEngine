@@ -8,7 +8,7 @@ public class TimeHandler : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _timeText;
     [SerializeField] private QuestionHandler _questionHandler;
-    [SerializeField] private int _timeForQuestion = 5;
+    [SerializeField] private int _timeForQuestion = 20;
 
     public bool TimeIsEnded;
 
@@ -29,7 +29,10 @@ public class TimeHandler : MonoBehaviour
 
     private void Update()
     {
-        _timeText.text = _time.ToString();
+        float minutes = Mathf.FloorToInt(_time / 60);
+        float seconds = Mathf.FloorToInt(_time % 60);
+        //_timeText.text = _time.ToString();
+        _timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
     IEnumerator DoTimer()

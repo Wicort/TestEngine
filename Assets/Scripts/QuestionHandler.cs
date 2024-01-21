@@ -20,8 +20,6 @@ public class QuestionHandler : MonoBehaviour
     {
         if (_awailableQuestions.Count == 0)
         {
-            // todo убрать заглушку
-            //_awailableQuestions = new List<Question>(_questions);
             return null;
         }
 

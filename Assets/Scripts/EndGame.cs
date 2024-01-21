@@ -16,6 +16,7 @@ public class EndGame : MonoBehaviour
         {
             PlayerPrefs.SetInt("Scores", _score.Scores);
             YandexGame.NewLeaderboardScores("Scores", _score.Scores);
+            
         }
         _scoreText.text = (_timeHandler.TimeIsEnded ? "Время вышло!\n" : "") + "Ваш счет: " + _score.Scores.ToString() + " из " + _questionHandler.QuestionCount;
     }

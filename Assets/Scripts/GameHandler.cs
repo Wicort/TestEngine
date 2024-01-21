@@ -12,14 +12,14 @@ public class GameHandler : MonoBehaviour
     private void OnEnable()
     {
         QuestionHandler.OnRanOutOfQuestions += EndGame;
-        QuestionView.OnDoInCorrectAnswer += EndGame;
+        //QuestionView.OnDoInCorrectAnswer += EndGame;
         TimeHandler.OnTimeIsEnded += EndGame;
     }
 
     private void OnDisable()
     {
         QuestionHandler.OnRanOutOfQuestions -= EndGame;
-        QuestionView.OnDoInCorrectAnswer -= EndGame;
+        //QuestionView.OnDoInCorrectAnswer -= EndGame;
         TimeHandler.OnTimeIsEnded -= EndGame;
     }
 
