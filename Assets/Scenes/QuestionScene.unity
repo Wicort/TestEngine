@@ -2549,7 +2549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _timeText: {fileID: 960427617}
   _questionHandler: {fileID: 35554771}
-  _timeForQuestion: 5
+  _timeForQuestion: 15
   TimeIsEnded: 0
 --- !u!4 &709120157
 Transform:
